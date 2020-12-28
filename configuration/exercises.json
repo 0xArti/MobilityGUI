@@ -2,7 +2,7 @@
     "metadata": {
         "advanced_enabled": true,
         "advanced_chance": 0.2,
-        "call": 1
+        "call": 2
     },
     "exercises": 
     [
@@ -66,21 +66,21 @@
             "name": "Scorpion Diamonds",
             "min": 4,
             "max": 8,
-            "measure": "hold",
+            "measure": "repeat",
             "type": "must"
         },
         {
             "name": "Scorpion Stab",
             "min": 4,
             "max": 8,
-            "measure": "hold",
+            "measure": "repeat",
             "type": "must"
         },
         {
             "name": "Scorpion Diamonds",
             "min": 4,
             "max": 8,
-            "measure": "hold",
+            "measure": "repeat",
             "type": "must"
         },
         {
@@ -304,14 +304,14 @@
             "name": "Easy Bridge Hold",
             "min": 8,
             "max": 20,
-            "measure": "repeat",
+            "measure": "hold",
             "type": "bonus"
         },
         {
             "name": "Easy Bridge Lean Hold",
             "min": 8,
             "max": 15,
-            "measure": "repeat",
+            "measure": "hold",
             "type": "bonus"
         },
         {
