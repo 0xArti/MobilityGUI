@@ -21,7 +21,6 @@ class Popup():
 
     def __init__(self):
         self._first_run = True
-        self.exercises = None
         self.gui_config = None
         self.layout = None
         self.window = None
@@ -43,19 +42,33 @@ class Popup():
             keep_on_top=True,
             resizable=False
         )
+
+    def is_hidden(self):
+        return self.window._Hidden
         
-    def display(self, exercises):
+    def display(self, exercises, timeout=None, updated=True):
+        """
+        :param exercises: list of exercises information
+        :param timeout: timeout in milliseconds to wait for user input
+        :param updated: if exercises has changed from last run
+        :returns: True if user clicked on the "Done" button
+        """
         if self._first_run:
             self.window.finalize()
-        exercises_list = self.window.FindElement(self.EXERCISE_KEY)
-        exercises_list.Update(values=exercises)
-        if not self._first_run:
-            sleep(1)  # Small delay for clear exercise's list update
-        self.window.UnHide()
-        event, _ = self.window.read()
-        self.window.Hide()
-        self._first_run = False
+            self.window.Hide()
+            self._first_run = False
 
+        exercises_list = self.window.FindElement(self.EXERCISE_KEY)
+        if updated:
+            exercises_list.Update(values=exercises)
+
+        if self.window._Hidden and exercises and updated:
+            self.window.UnHide()
+
+        event, _ = self.window.read(timeout=timeout)
+        if event != "__TIMEOUT__":
+            self.window.Hide()
+        
         return event == self.DONE_KEY
 
     def close(self):
@@ -71,7 +84,7 @@ class Popup():
                 elements.close_button(self.EXIT_KEY)
             ],
             [
-                elements.exercise_list(self.EXERCISE_KEY, self.exercises)
+                elements.exercise_list(self.EXERCISE_KEY, self.exercises, font=(self.gui_config.font, 16))
             ],
             [
                 elements.ignore_button(self.IGNORE_KEY, font=(self.gui_config.font, 14)),

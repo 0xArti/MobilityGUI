@@ -1,4 +1,5 @@
 import json
+import threading
 import win32serviceutil
 import servicemanager
 import win32event
@@ -11,8 +12,17 @@ from src.service.user_locked import is_locked_workstation
 from src.mobility.exercise_cache import ExerciseCache
 from src.gui.popup import Popup
 
-MINUTE = 60  # seconds
-DELAY = 1
+MINUTE = 60         # seconds
+SECOND = 1000       # milliseconds 
+USER_DELAY = 1      # 1000 milliseconds for the UI
+
+
+def run_threaded(func):
+    def run(*args, **kwargs):
+        thread = threading.Thread(target=func, args=args, kwargs=kwargs)
+        thread.start()
+        return thread
+    return run
 
 
 class MobilityService(win32serviceutil.ServiceFramework):
@@ -20,7 +30,7 @@ class MobilityService(win32serviceutil.ServiceFramework):
     _svc_display_name_ = "Mobility Service"
     _svc_description_ = "Display GUI popup based on interval to remind you that you need to move. \
         and provide an exercise designed for you"
-    _DEFAULT_MINUTES_INTERVAL = 20  # Best value 20
+    _DEFAULT_MINUTES_INTERVAL = 0.5  # Best value 20
 
     @classmethod
     def parse_command_line(cls):
@@ -32,8 +42,10 @@ class MobilityService(win32serviceutil.ServiceFramework):
         self.popup = None
         self.exercises = None
         self.date = None
+        self.worker_thread = None
         self.seconds_interval = None
         self.seconds_counter = None
+        self.updated = None
 
     def SvcStop(self):
         self.stop()
@@ -68,21 +80,21 @@ class MobilityService(win32serviceutil.ServiceFramework):
         self.popup.initialize()
         self.exercises = ExerciseCache()
         self.date = self._get_date()
+        self.worker_thread = None
         self.seconds_interval = MINUTE * self._DEFAULT_MINUTES_INTERVAL
         self.seconds_counter = 0
+        self.updated = False
 
     def stop(self):
         self.popup.close()
 
-    def process(self):
-        """
-        Service logic
-        """
+    @run_threaded
+    def worker(self):
         # Don't increase timer when user is away from computer
         if is_locked_workstation():
             return
 
-        self.seconds_counter += DELAY
+        self.seconds_counter += USER_DELAY
         # Don't display popup if timeout is not reached yet
         if not self._is_timeout():
             return
@@ -93,7 +105,24 @@ class MobilityService(win32serviceutil.ServiceFramework):
 
         # Display user popup with exercises and get result
         self.exercises.generate_exercise(by_order=True)
-        user_result = self.popup.display(self.exercises.current)
+        self.updated = True
+
+    def process(self):
+        """
+        Service logic
+        Note: Calling display() will cause the service to wait for user IO
+          if timeout is reached, the function returns
+        """
+        if not self.worker_thread:
+            self.worker_thread = self.worker()
+            self.worker_thread.join()
+            self.worker_thread = None
+        user_result = self.popup.display(
+            self.exercises.current, 
+            timeout=USER_DELAY * SECOND, 
+            updated=self.updated
+        )
+        self.updated = False
         if user_result:
             self.exercises.clear()
         
@@ -102,6 +131,5 @@ class MobilityService(win32serviceutil.ServiceFramework):
         Service loop
         """
         while True:
-            self.process()    
-            sleep(DELAY)
+            self.process()
             

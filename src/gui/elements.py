@@ -20,7 +20,7 @@ def close_button(exit_key):
         image_data=_read_close_button_image(),
         button_color=(sg.theme_background_color(), sg.theme_background_color()),
         border_width=DISABLE_BORDER_WIDTH,
-        pad=((296, 0), (0, 0)),
+        pad=((316, 0), (0, 0)),
         key=exit_key
     )
 
@@ -31,10 +31,11 @@ def title(title_name):
     )
 
 
-def exercise_list(exercise_key, exercises):
+def exercise_list(exercise_key, exercises, font):
     return sg.Listbox(
         values=exercises,
-        size=(30, 5),
+        font=font,
+        size=(32, 5),
         pad=((20, 0), (10, 0)),
         no_scrollbar=True,
         key=exercise_key
@@ -49,7 +50,7 @@ def done_button(done_key):
         focus=True,
         border_width=DISABLE_BORDER_WIDTH,
         size=(10, 1),
-        pad=((173, 0), (15, 0)),
+        pad=((198, 0), (15, 0)),
         key=done_key
     )
 
