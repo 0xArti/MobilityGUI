@@ -52,6 +52,7 @@ class ExerciseCache():
             elif self.sorted_exercises.bonus:
                 return self._choose_exercise(self.sorted_exercises.bonus)
         else:
+            # linux does not have state for the exercises that already done
             simple_exercises = self.sorted_exercises.must.copy()
             simple_exercises.extend(self.sorted_exercises.bonus)
             return self._random_exercise(simple_exercises)

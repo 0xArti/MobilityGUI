@@ -41,7 +41,6 @@ class Popup():
             font=(self.gui_config.font, 16),
             no_titlebar=True,
             keep_on_top=True,
-            disable_minimize=True,
             resizable=False
         )
         
