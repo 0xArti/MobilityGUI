@@ -1,0 +1,577 @@
+{
+    "metadata": {
+        "advanced_enabled": true,
+        "advanced_chance": 0.2,
+        "call": 1
+    },
+    "exercises": 
+    [
+        {
+            "name": "Push-up",
+            "min": 5,
+            "max": 15,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Slow Push-up",
+            "min": 5,
+            "max": 8,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Scapula Press",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Full Scapula Press",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Scapula Circles",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Full Scapula Press",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Good Morning",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Wall Nail",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Scorpion Diamonds",
+            "min": 4,
+            "max": 8,
+            "measure": "hold",
+            "type": "must"
+        },
+        {
+            "name": "Scorpion Stab",
+            "min": 4,
+            "max": 8,
+            "measure": "hold",
+            "type": "must"
+        },
+        {
+            "name": "Scorpion Diamonds",
+            "min": 4,
+            "max": 8,
+            "measure": "hold",
+            "type": "must"
+        },
+        {
+            "name": "Scapula Shrugs",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Elbow Shrugs",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Close Backward Shoulders Circles",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Backward Shoulders Circles",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Shoulder Dislocation (Stick)",
+            "min": 3,
+            "max": 7,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Shoulder Extension (Stick)",
+            "min": 3,
+            "max": 7,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Deadlift Prayer",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Sky Touch",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Head to Shoulder",
+            "min": 1,
+            "max": 3,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Up-Down Head Moves",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Left-Right Head Moves",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Lower-Half Neck Circles",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Upper-Half Neck Circles",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Posterior Pelvic Tilt",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Plank",
+            "min": 20,
+            "max": 50,
+            "measure": "hold",
+            "type": "must"
+        },
+        {
+            "name": "Reverse Plank",
+            "min": 15,
+            "max": 40,
+            "measure": "hold",
+            "type": "must"
+        },
+        {
+            "name": "Jefferson Curl",
+            "min": 3,
+            "max": 5,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Cat Cow",
+            "min": 3,
+            "max": 5,
+            "measure": "repeat",
+            "type": "must"
+        },
+        {
+            "name": "Hold Push-up",
+            "min": 10,
+            "max": 30,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Deep Squat",
+            "min": 5,
+            "max": 10,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Deep Squat Rotations",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Deep Squat Wrist Circles",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Deep Squat Reach",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Archer Squat",
+            "min": 2,
+            "max": 5,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Overhead Squat",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Air Squat Sit",
+            "min": 20,
+            "max": 50,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Wall Squat Sit",
+            "min": 30,
+            "max": 60,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Knee Sit Wrist Circles",
+            "min": 2,
+            "max": 4,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Wrist Flexion",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Lunge Stance Rotations",
+            "min": 4,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Easy Bridge to Pike Sit",
+            "min": 2,
+            "max": 5,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Easy Bridge Hold",
+            "min": 8,
+            "max": 20,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Easy Bridge Lean Hold",
+            "min": 8,
+            "max": 15,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Cobra to Dog",
+            "min": 3,
+            "max": 5,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Butterfly Sit",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "L-sit raises",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Catterpillar Press",
+            "min": 3,
+            "max": 5,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Single Leg Balance",
+            "min": 10,
+            "max": 30,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Fingertips Balance",
+            "min": 10,
+            "max": 20,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Alt Bird-Dog",
+            "min": 2,
+            "max": 5,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Posterior Hollow",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Assisted Tuck Hold",
+            "min": 5,
+            "max": 15,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Monster Walk",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Fingers Push-up",
+            "min": 5,
+            "max": 10,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Elbow Circles",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Hands Locks",
+            "min": 8,
+            "max": 12,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Hands Shake",
+            "min": 8,
+            "max": 12,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Fingers Squash",
+            "min": 8,
+            "max": 12,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Knee Hold to Reverse",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Knee Rotations",
+            "min": 3,
+            "max": 5,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Standing Hip Flexion",
+            "min": 8,
+            "max": 20,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Ostrich Walk",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Advanced Ostrich Walk",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Alt Straddle Stance Stretch",
+            "min": 3,
+            "max": 8,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Kick-ups",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Side Kick-ups",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Pike Sit Pulses",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Straddle Overhead Toe Reach",
+            "min": 8,
+            "max": 20,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Alt Camel Stretch",
+            "min": 2,
+            "max": 4,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Alt Spine Lateral Flexion",
+            "min": 2,
+            "max": 4,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Floor Touches",
+            "min": 2,
+            "max": 4,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Seated Straddle Good Morning",
+            "min": 3,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Close Hands Spinal Flexion",
+            "min": 2,
+            "max": 3,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Standing Spinal Rotations",
+            "min": 4,
+            "max": 6,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Wall Pectoral Stretch",
+            "min": 5,
+            "max": 10,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Standing Wall Cobra",
+            "min": 5,
+            "max": 10,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Wall Sky Touch",
+            "min": 5,
+            "max": 10,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Low Jumps",
+            "min": 6,
+            "max": 12,
+            "measure": "repeat",
+            "type": "bonus"
+        },
+        {
+            "name": "Pseudo Planche Push-up",
+            "min": 3,
+            "max": 8,
+            "measure": "repeat",
+            "type": "advanced"
+        },
+        {
+            "name": "Pike Push-up",
+            "min": 3,
+            "max": 8,
+            "measure": "repeat",
+            "type": "advanced"
+        }
+    ]
+}
