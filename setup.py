@@ -28,7 +28,7 @@ setuptools.setup(
     install_requires=get_requirements(),
     entry_points = {
         'console_scripts': [
-            'mobility=mobility.exercises_provider:main'
+            'mobility=src.gui.on_demand:main'
         ],
     }
 )
