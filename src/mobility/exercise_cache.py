@@ -6,7 +6,7 @@ from src.mobility.exercises_provider import get_exercises, get_exercise_metadata
 
 class ExerciseCache():
     def __init__(self):
-        self._exercise_metadata = None
+        self._metadata = None
         self._all_exercises = None
         self.sorted_exercises = DynamicConfig(
             must=None,
@@ -17,7 +17,7 @@ class ExerciseCache():
         self._initialize()
 
     def _initialize(self, renew=True):
-        self._exercise_metadata = get_exercise_metadata()
+        self._metadata = get_exercise_metadata()
         self._all_exercises = get_exercises()
         for key, value in self.sorted_exercises.items():
             self.sorted_exercises[key] = [exercise for exercise in self._all_exercises 
@@ -58,17 +58,18 @@ class ExerciseCache():
             return self._random_exercise(simple_exercises)
 
     def salty_advanced(self):
-        if random.random() <= self._exercise_metadata.chance:
+        if random.random() <= self._metadata.advanced_chance:
             self.add(self._random_exercise(self.sorted_exercises.advanced))
 
     def generate_exercise(self, by_order=False):
-        if self._finished_all_exercises():
-            self._initialize(renew=False)
+        for call in range(self._metadata.call):
+            if self._finished_all_exercises():
+                self._initialize(renew=False)
 
-        exercise = self.one_exercise(by_order)
-        self.add(exercise)
+            exercise = self.one_exercise(by_order)
+            self.add(exercise)
 
-        if self._exercise_metadata.enabled and self.sorted_exercises.advanced != []:
+        if self._metadata.advanced_enabled and self.sorted_exercises.advanced != []:
             self.salty_advanced()
 
     @property

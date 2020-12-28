@@ -69,10 +69,16 @@ The exercises configuration consist from three elements:
      for example, to retain strength or increase flexibility.
 By default (at least in windows), you will first finished the `must` exercises
 and then move to the `bonus` exercises.
-The `advanced` exercises are additional exercises that may summon randomly (20% by default).
-but if you don't need the advanced exercises you could switch them off, by setting `enabled` to False.
+
+Exercises Metadata
+* Each instance is adding one exercise by default. It could be change by increase 
+  the `call` value.
+* The `advanced` exercises are additional exercises that may summon randomly (20% by default).
+  but if you don't need the advanced exercises you could switch them off 
+  by setting `advanced_enabled` to False.
 
 Feel free to change, add or remove exercises to match your body.
+Right now there are up to 80 non-advanced exercises!
 
 ### GUI
 The GUI configuration is pretty solid,

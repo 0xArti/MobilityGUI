@@ -35,7 +35,7 @@ class Exercise(config_loader.DynamicConfig):
 
 def get_exercise_metadata():
     return config_loader.DynamicConfig(
-        **config_loader.load_from_configuration("exercises.json", key="advanced")
+        **config_loader.load_from_configuration("exercises.json", key="metadata")
     )
 
 
