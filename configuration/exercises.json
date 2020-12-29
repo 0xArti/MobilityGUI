@@ -1,8 +1,8 @@
 {
     "metadata": {
         "advanced_enabled": true,
-        "advanced_chance": 0.2,
-        "call": 2
+        "advanced_chance": 0.1,
+        "call": 1
     },
     "exercises": 
     [
