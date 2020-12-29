@@ -4,7 +4,7 @@ from src.config_loader import DynamicConfig
 from src.mobility.exercises_provider import get_exercises, get_exercise_metadata
 
 
-class ExerciseCache():
+class ExerciseCache:
     def __init__(self):
         self._metadata = None
         self._all_exercises = None

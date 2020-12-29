@@ -4,7 +4,7 @@ import base64
 from pathlib import Path
 
 
-class DynamicConfig():
+class DynamicConfig:
     """
     Dynamic config class from configuration file.
     Creates attribute for keys and set method for their values

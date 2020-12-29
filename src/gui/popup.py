@@ -12,7 +12,7 @@ def create_config_values():
     return config_loader.DynamicConfig(**config)
 
 
-class Popup():
+class Popup:
     WINDOW_NAME = "Mobility"
     EXIT_KEY = "Exit"
     IGNORE_KEY = "Ignore"

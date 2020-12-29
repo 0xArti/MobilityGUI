@@ -21,7 +21,7 @@ def run_threaded(func):
     return run
 
 
-class MobilityService():
+class MobilityService:
     _DEFAULT_MINUTES_INTERVAL = 20  # Best value 20
 
     def __init__(self):
