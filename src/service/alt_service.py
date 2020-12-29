@@ -22,11 +22,7 @@ def run_threaded(func):
 
 
 class MobilityService():
-    _svc_name_ = "MobilityService"
-    _svc_display_name_ = "Mobility Service"
-    _svc_description_ = "Display GUI popup based on interval to remind you that you need to move. \
-        and provide an exercise designed for you"
-    _DEFAULT_MINUTES_INTERVAL = 0.5  # Best value 20
+    _DEFAULT_MINUTES_INTERVAL = 20  # Best value 20
 
     def __init__(self):
         self.popup = Popup()
