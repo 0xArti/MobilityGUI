@@ -1,9 +1,5 @@
 import json
 import threading
-import win32serviceutil
-import servicemanager
-import win32event
-import win32service
 
 from time import sleep
 from datetime import datetime
@@ -25,39 +21,22 @@ def run_threaded(func):
     return run
 
 
-class MobilityService(win32serviceutil.ServiceFramework):
+class MobilityService():
     _svc_name_ = "MobilityService"
     _svc_display_name_ = "Mobility Service"
     _svc_description_ = "Display GUI popup based on interval to remind you that you need to move. \
         and provide an exercise designed for you"
     _DEFAULT_MINUTES_INTERVAL = 0.5  # Best value 20
 
-    @classmethod
-    def parse_command_line(cls):
-        win32serviceutil.HandleCommandLine(cls)
-
-    def __init__(self, args):
-        win32serviceutil.ServiceFramework.__init__(self, args)
-        self.hWaitStop = win32event.CreateEvent(None, 0, 0, None)
-        self.popup = None
-        self.exercises = None
-        self.date = None
+    def __init__(self):
+        self.popup = Popup()
+        self.popup.initialize()
+        self.exercises = ExerciseCache()
+        self.date = self._get_date()
         self.worker_thread = None
-        self.seconds_interval = None
-        self.seconds_counter = None
-        self.updated = None
-
-    def SvcStop(self):
-        self.stop()
-        self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
-        win32event.SetEvent(self.hWaitStop)
-
-    def SvcDoRun(self):
-        self.start()
-        servicemanager.LogMsg(servicemanager.EVENTLOG_INFORMATION_TYPE,
-                              servicemanager.PYS_SERVICE_STARTED,
-                              (self._svc_name_, ''))
-        self.main()
+        self.seconds_interval = MINUTE * self._DEFAULT_MINUTES_INTERVAL
+        self.seconds_counter = 0
+        self.updated = False
 
     def _get_date(self):
         return datetime.now().strftime("%Y/%m/%d")
@@ -76,14 +55,11 @@ class MobilityService(win32serviceutil.ServiceFramework):
         return False
 
     def start(self):
-        self.popup = Popup()
-        self.popup.initialize()
-        self.exercises = ExerciseCache()
-        self.date = self._get_date()
-        self.worker_thread = None
-        self.seconds_interval = MINUTE * self._DEFAULT_MINUTES_INTERVAL
-        self.seconds_counter = 0
-        self.updated = False
+        """
+        Service loop
+        """
+        while True:
+            self.process()
 
     def stop(self):
         self.popup.close()
@@ -128,7 +104,9 @@ class MobilityService(win32serviceutil.ServiceFramework):
         
     def main(self):
         """
-        Service loop
+        Service logic
+        Note: Calling display() will cause the service to wait for user IO
+          if timeout is reached, the function returns
         """
         while True:
             self.process()

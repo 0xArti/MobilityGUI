@@ -1,5 +1,6 @@
-from src.service.mobility_service import MobilityService
+from src.service.alt_service import MobilityService
 
 
 if __name__ == "__main__":
-    MobilityService.parse_command_line()
+    mobility_service = MobilityService()
+    mobility_service.start()

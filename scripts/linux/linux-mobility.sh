@@ -15,7 +15,6 @@ fi
 
 
 export DISPLAY=:0.0
-echo $MOBILITY_PATH
 cd $MOBILITY_PATH
 source venv/bin/activate
 mobility &
