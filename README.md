@@ -97,3 +97,11 @@ Either way, you should not change const configuration
 (you will need to change the code source as well)
 
  ![plot](./assets/example_gui.png)
+<br/><br/> 
+
+## TODO
+ * Add more types of exercises
+ * Add more exercises
+ * Add detailed exercises documentation 
+ * Add dynamic configuration logic for delivering exercises,\
+    * Creating template for some logics.       
