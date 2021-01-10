@@ -34,8 +34,8 @@ class Popup:
         self.window = sg.Window(
             title=self.WINDOW_NAME,
             layout=self.layout, 
-            size=(self.gui_config.WIDTH, self.gui_config.HEIGHT),
-            location=(self.gui_config.X, self.gui_config.Y),
+            size=(self.gui_config.width, self.gui_config.height),
+            location=(self.gui_config.x, self.gui_config.y),
             alpha_channel=self.gui_config.alpha, 
             font=(self.gui_config.font, 16),
             no_titlebar=True,

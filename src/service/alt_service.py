@@ -7,7 +7,7 @@ from datetime import datetime
 from src import consts
 from src.config_loader import DynamicConfig, load_from_configuration
 from src.service import user_inactive
-from src.mobility.exercise_cache import ExerciseCache
+from src.mobility.exercise_storage import ExerciseStorage
 from src.gui.popup import Popup
 
 
@@ -26,7 +26,7 @@ class MobilityService:
         )
         self.popup = Popup()
         self.popup.initialize()
-        self.exercises = ExerciseCache()
+        self.exercises = ExerciseStorage()
         self.date = self._get_date()
         self.worker_thread = None
         self.seconds_interval = consts.MINUTE * self.settings.popup_timeout
@@ -98,13 +98,4 @@ class MobilityService:
         self.updated = False
         if user_result:
             self.exercises.clear()
-        
-    def main(self):
-        """
-        Service logic
-        Note: Calling display() will cause the service to wait for user IO
-          if timeout is reached, the function returns
-        """
-        while True:
-            self.process()
             

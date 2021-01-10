@@ -50,7 +50,6 @@ def is_locked_workstation():
         return _unix_is_locked_workstation()
 
 
-
 def is_user_idle(idle_timeout):
     if sys.platform == "win32":
         idle_time = _win_get_user_idle()
