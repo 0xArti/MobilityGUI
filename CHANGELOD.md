@@ -16,6 +16,7 @@ What's New
     * Massage Ball (e.g. Lacrosse Ball)
     * Light Weights (e.g. 0.5kg - 2.5kg)
     * Rings (e.g. Gymnastic Rings)
+    * Yoga Blocks
     * Resistance Bands 
 * Added more exercises and types
 * Added guide for exercises\

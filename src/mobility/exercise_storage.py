@@ -26,7 +26,7 @@ class ExerciseStorage:
         self._all_exercises = get_exercises(settings.equipment, equipments)
         for key, value in self.sorted_exercises.items():
             self.sorted_exercises[key] = [exercise for exercise in self._all_exercises 
-                                            if exercise.type == key]
+                                            if key in exercise.type]
 
         # instantiate Template object 
         template_class = exercise_templates[settings.template]

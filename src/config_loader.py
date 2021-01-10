@@ -27,15 +27,19 @@ class DynamicConfig:
     """
     def __init__(self, **options):
         for key, value in options.items():
-            key = key.lower()
+            key = self._fix_key(key)
             self.__set_key(key, value)
             self.__create_setter(key)
+
+    def _fix_key(self, key):
+        return key.lower().replace(" ", "_")
 
     def __set_key(self, key, value):
         self.__setattr__(key, value)
 
     def __create_setter(self, key):
-        setattr(self.__class__, f"set_{key.lower()}", self.__set_value(key))
+        key = self._fix_key(key)
+        setattr(self.__class__, f"set_{key}", self.__set_value(key))
 
     def __set_value(self, key, value=None):
         def __inner(self, value):
@@ -43,13 +47,14 @@ class DynamicConfig:
         return __inner
     
     def __setitem__(self, key, item):
-        key = key.lower()
+        key = self._fix_key(key)
         if not hasattr(self, key):
             self.__create_setter(key)
         self.__set_key(key, item)
 
     def __getitem__(self, key):
-        return getattr(self, key.lower())
+        key = self._fix_key(key)
+        return getattr(self, key)
 
     def items(self):
         return self.__dict__.items()
