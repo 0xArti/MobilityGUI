@@ -5,121 +5,146 @@
         "Massage Ball": true,
         "Resistance Bands": true,
         "Light Weights": true,
+        "Yoga Blocks": true,
         "Rings": true
     },
     "exercises": 
     [
         {
-            "name": "Push-up",
-            "min": 5,
-            "max": 15,
+            "name": "Head to Shoulder",
+            "min": 1,
+            "max": 3,
             "measure": "repeat",
-            "type": "must"
+            "type": "neck"
         },
         {
-            "name": "Slow Push-up",
-            "min": 5,
+            "name": "Up-Down Head Moves",
+            "min": 4,
             "max": 8,
             "measure": "repeat",
-            "type": "must"
+            "type": "neck"
         },
+        {
+            "name": "Left-Right Head Moves",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "neck"
+        },
+        {
+            "name": "Lower-Half Neck Circles",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "neck"
+        },
+        {
+            "name": "Upper-Half Neck Circles",
+            "min": 4,
+            "max": 8,
+            "measure": "repeat",
+            "type": "neck"
+        },
+
+
+
         {
             "name": "Scapula Press",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Full Scapula Press",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Scapula Circles",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Full Scapula Circles",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Good Morning",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Wall Nail",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Scorpion Diamonds",
             "min": 4,
             "max": 8,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Scorpion Stab",
             "min": 4,
             "max": 8,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Scorpion Hammer",
             "min": 4,
             "max": 8,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Scapula Shrugs",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Elbow Shrugs",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Close Backward Shoulders Circles",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Backward Shoulders Circles",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "bonus"
+            "type": "daily"
         },
         {
             "name": "Shoulder Dislocation (Stick)",
             "min": 3,
             "max": 7,
             "measure": "repeat",
-            "type": "must",
+            "type": "daily",
             "equipment": "Stick"
         },
         {
@@ -127,7 +152,7 @@
             "min": 3,
             "max": 7,
             "measure": "repeat",
-            "type": "must",
+            "type": "daily",
             "equipment": "Stick"
         },
         {
@@ -135,85 +160,53 @@
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Sky Touch",
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "must"
-        },
-        {
-            "name": "Head to Shoulder",
-            "min": 1,
-            "max": 3,
-            "measure": "repeat",
-            "type": "must"
-        },
-        {
-            "name": "Up-Down Head Moves",
-            "min": 4,
-            "max": 8,
-            "measure": "repeat",
-            "type": "must"
-        },
-        {
-            "name": "Left-Right Head Moves",
-            "min": 4,
-            "max": 8,
-            "measure": "repeat",
-            "type": "must"
-        },
-        {
-            "name": "Lower-Half Neck Circles",
-            "min": 4,
-            "max": 8,
-            "measure": "repeat",
-            "type": "must"
-        },
-        {
-            "name": "Upper-Half Neck Circles",
-            "min": 4,
-            "max": 8,
-            "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Posterior Pelvic Tilt",
             "min": 3,
             "max": 6,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Plank",
             "min": 20,
             "max": 50,
             "measure": "hold",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Reverse Plank",
             "min": 15,
             "max": 40,
             "measure": "hold",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Jefferson Curl",
             "min": 3,
             "max": 5,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
         {
             "name": "Cat Cow",
             "min": 3,
             "max": 5,
             "measure": "repeat",
-            "type": "must"
+            "type": "daily"
         },
+
+
+
         {
             "name": "Hold Push-up",
             "min": 10,
@@ -390,7 +383,7 @@
             "type": "bonus"
         },
         {
-            "name": "Fingers Push-up",
+            "name": "Fingers Push-up Hold",
             "min": 5,
             "max": 10,
             "measure": "hold",
@@ -564,19 +557,217 @@
             "measure": "repeat",
             "type": "bonus"
         },
+
+
+
+        {
+            "name": "Push-up",
+            "min": 5,
+            "max": 15,
+            "measure": "repeat",
+            "type": "power"
+        },
+        {
+            "name": "Slow Push-up",
+            "min": 5,
+            "max": 8,
+            "measure": "repeat",
+            "type": "power"
+        },
         {
             "name": "Pseudo Planche Push-up",
             "min": 3,
             "max": 8,
             "measure": "repeat",
-            "type": "advanced"
+            "type": "power"
         },
         {
             "name": "Pike Push-up",
             "min": 3,
             "max": 8,
             "measure": "repeat",
-            "type": "advanced"
+            "type": "power"
+        },
+        {
+            "name": "Diamond Push-up",
+            "min": 5,
+            "max": 12,
+            "measure": "repeat",
+            "type": "power"
+        },
+
+
+        
+        {
+            "name": "Knee Hold (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "hold",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Wide Knee Hold (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "hold",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Narrow Knee Hold (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "hold",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Behind Knee Hold (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "hold",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Knee Monster Walk (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Straddle Stance Hold (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "hold",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Straddle Stance Reach (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Knee Jumps (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Knee Rotor (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Knee Push-up (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Straddle Push-up Hold (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "hold",
+            "type": "balance",
+            "equipment": "rings"
+        },
+        {
+            "name": "Push-up Hold (Rings)",
+            "min": 1,
+            "max": 1,
+            "measure": "hold",
+            "type": "balance",
+            "equipment": "rings"
+        },
+
+
+
+        {
+            "name": "Elbows Massage (Ball)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message",
+            "equipment": "Massage Ball"
+        },
+        {
+            "name": "Shoulders Massage (Ball)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message",
+            "equipment": "Massage Ball"
+        },
+        {
+            "name": "Biceps Massage (Ball)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message",
+            "equipment": "Massage Ball"
+        },
+        {
+            "name": "Triceps Massage (Ball)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message",
+            "equipment": "Massage Ball"
+        },
+        {
+            "name": "Forearms Massage (Ball)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message",
+            "equipment": "Massage Ball"
+        },
+        {
+            "name": "Neck Massage (Ball)",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message",
+            "equipment": "Massage Ball"
+        },
+        {
+            "name": "Elbows Heat",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message"
+        },
+        {
+            "name": "Hands Heat",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "message"
+        },
+
+
+
+        {
+            "name": "Straddle Sit",
+            "min": 10,
+            "max": 30,
+            "measure": "hold",
+            "type": "flexibility"
         }
     ]
 }
