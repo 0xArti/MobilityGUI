@@ -4,13 +4,11 @@ import threading
 from time import sleep
 from datetime import datetime
 
-from src.service.user_locked import is_locked_workstation
+from src import consts
+from src.config_loader import DynamicConfig, load_from_configuration
+from src.service import user_inactive
 from src.mobility.exercise_cache import ExerciseCache
 from src.gui.popup import Popup
-
-MINUTE = 60         # seconds
-SECOND = 1000       # milliseconds 
-USER_DELAY = 1      # 1000 milliseconds for the UI
 
 
 def run_threaded(func):
@@ -22,15 +20,16 @@ def run_threaded(func):
 
 
 class MobilityService:
-    _DEFAULT_MINUTES_INTERVAL = 20  # Best value 20
-
     def __init__(self):
+        self.settings = DynamicConfig(
+            **load_from_configuration("settings.json")
+        )
         self.popup = Popup()
         self.popup.initialize()
         self.exercises = ExerciseCache()
         self.date = self._get_date()
         self.worker_thread = None
-        self.seconds_interval = MINUTE * self._DEFAULT_MINUTES_INTERVAL
+        self.seconds_interval = consts.MINUTE * self.settings.popup_timeout
         self.seconds_counter = 0
         self.updated = False
 
@@ -63,10 +62,12 @@ class MobilityService:
     @run_threaded
     def worker(self):
         # Don't increase timer when user is away from computer
-        if is_locked_workstation():
+        if user_inactive.is_locked_workstation():
+            return
+        if user_inactive.is_user_idle(self.settings.idle_timeout):
             return
 
-        self.seconds_counter += USER_DELAY
+        self.seconds_counter += consts.USER_DELAY
         # Don't display popup if timeout is not reached yet
         if not self._is_timeout():
             return
@@ -91,7 +92,7 @@ class MobilityService:
             self.worker_thread = None
         user_result = self.popup.display(
             self.exercises.current, 
-            timeout=USER_DELAY * SECOND, 
+            timeout=consts.USER_DELAY * consts.SECOND, 
             updated=self.updated
         )
         self.updated = False
