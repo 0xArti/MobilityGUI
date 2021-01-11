@@ -8,9 +8,9 @@ class BaseTemplate(metaclass=abc.ABCMeta):
         self.stage = 1
         self.all_exercises = exercises
         self._exercises_copy = copy.deepcopy(self.all_exercises)
-
+    
     def _random_choice(self, exercises, chance=1):
-        if random.randint(1, chance):
+        if random.randint(1, chance) == 1:
             return random.choice(exercises)
 
     def pop(self, exercises, chance=1):
