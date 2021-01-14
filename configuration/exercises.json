@@ -12,35 +12,35 @@
     [
         {
             "name": "Head to Shoulder",
-            "min": 1,
-            "max": 3,
+            "min": 3,
+            "max": 4,
             "measure": "repeat",
             "type": "neck"
         },
         {
             "name": "Up-Down Head Moves",
-            "min": 4,
-            "max": 8,
+            "min": 6,
+            "max": 10,
             "measure": "repeat",
             "type": "neck"
         },
         {
             "name": "Left-Right Head Moves",
-            "min": 4,
-            "max": 8,
+            "min": 6,
+            "max": 10,
             "measure": "repeat",
             "type": "neck"
         },
         {
             "name": "Lower-Half Neck Circles",
-            "min": 4,
+            "min": 6,
             "max": 8,
             "measure": "repeat",
             "type": "neck"
         },
         {
             "name": "Upper-Half Neck Circles",
-            "min": 4,
+            "min": 6,
             "max": 8,
             "measure": "repeat",
             "type": "neck"
@@ -50,128 +50,128 @@
 
         {
             "name": "Scapula Press",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Full Scapula Press",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Scapula Circles",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Full Scapula Circles",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Good Morning",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Wall Nail",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Scorpion Diamonds",
-            "min": 4,
+            "min": 7,
             "max": 8,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Scorpion Stab",
-            "min": 4,
+            "min": 7,
             "max": 8,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Scorpion Hammer",
-            "min": 4,
+            "min": 7,
             "max": 8,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Scapula Shrugs",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Elbow Shrugs",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Close Backward Shoulders Circles",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Backward Shoulders Circles",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Shoulder Dislocation (Stick)",
-            "min": 3,
-            "max": 7,
+            "min": 4,
+            "max": 6,
             "measure": "repeat",
             "type": "daily",
             "equipment": "Stick"
         },
         {
             "name": "Shoulder Extension (Stick)",
-            "min": 3,
-            "max": 7,
+            "min": 4,
+            "max": 6,
             "measure": "repeat",
             "type": "daily",
             "equipment": "Stick"
         },
         {
             "name": "Deadlift Prayer",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Sky Touch",
-            "min": 5,
+            "min": 8,
             "max": 10,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Posterior Pelvic Tilt",
-            "min": 3,
+            "min": 5,
             "max": 6,
             "measure": "repeat",
             "type": "daily"
@@ -192,15 +192,22 @@
         },
         {
             "name": "Jefferson Curl",
-            "min": 3,
-            "max": 5,
+            "min": 2,
+            "max": 4,
+            "measure": "repeat",
+            "type": "daily"
+        },
+        {
+            "name": "lazy Jefferson Curl",
+            "min": 4,
+            "max": 6,
             "measure": "repeat",
             "type": "daily"
         },
         {
             "name": "Cat Cow",
-            "min": 3,
-            "max": 5,
+            "min": 4,
+            "max": 6,
             "measure": "repeat",
             "type": "daily"
         },
