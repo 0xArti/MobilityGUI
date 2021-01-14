@@ -51,9 +51,12 @@ def is_locked_workstation():
 
 
 def is_user_idle(idle_timeout):
+    """
+    Measure in seconds
+    """
     if sys.platform == "win32":
         idle_time = _win_get_user_idle()
     else:
         idle_time = _unix_get_user_idle()
 
-    return idle_time >= idle_timeout
+    return idle_time >= idle_timeout * consts.MINUTE
