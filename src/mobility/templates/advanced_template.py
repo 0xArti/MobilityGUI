@@ -23,28 +23,16 @@ class AdvancedTemplate(BaseTemplate):
     
     def _stage_1(self):
         neck_exercise = self._neck_exercise(chance=2)
-        first_exercise = self.pop(self.all_exercises.daily)
-        if self.is_empty(self.all_exercises.daily):
-            self.refill("daily")
-            self.increase_stage()
-            second_exercise = self.get(self._exercises_copy.daily)
-        else:
-            second_exercise = self.pop(self.all_exercises.daily)
+        two_daily_exercises = self.pop_n(category="daily", amount=2, increase=True)
         
         return [
             neck_exercise,
-            first_exercise,
-            second_exercise
+            two_daily_exercises
         ]
 
     def _stage_2(self):
         if random.randint(0, 1) == 0:
-            first_exercise = self.pop(self.all_exercises.bonus)
-            if self.is_empty(self.all_exercises.bonus):
-                self.refill("bonus")
-                second_exercise = self.get(self._exercises_copy.bonus)
-            else:
-                second_exercise = self.pop(self.all_exercises.bonus)
+            first_exercise, second_exercise = self.pop_n(category="bonus", amount=2)
         else:
             first_exercise = self.pop(self.all_exercises.daily)
             second_exercise = self.pop(self.all_exercises.bonus)
