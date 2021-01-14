@@ -204,6 +204,14 @@
             "measure": "repeat",
             "type": "daily"
         },
+        {
+            "name": "Hang (Bar)",
+            "min": 10,
+            "max": 25,
+            "measure": "hold",
+            "type": "daily",
+            "equipment": "bar"
+        },
 
 
 
@@ -594,6 +602,62 @@
             "max": 12,
             "measure": "repeat",
             "type": "power"
+        },
+        {
+            "name": "Hang (Bar)",
+            "min": 10,
+            "max": 25,
+            "measure": "hold",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Active Hang (Bar)",
+            "min": 8,
+            "max": 20,
+            "measure": "hold",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Pull-up Hang (Bar)",
+            "min": 8,
+            "max": 20,
+            "measure": "hold",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Active Hang Pulls (Bar)",
+            "min": 4,
+            "max": 10,
+            "measure": "repeat",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Pull-up (Bar)",
+            "min": 3,
+            "max": 10,
+            "measure": "repeat",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Slow Pull-up (Bar)",
+            "min": 3,
+            "max": 7,
+            "measure": "repeat",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Close Pull-up (Bar)",
+            "min": 3,
+            "max": 7,
+            "measure": "repeat",
+            "type": "power",
+            "equipment": "bar"
         },
 
 
