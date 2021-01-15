@@ -11,18 +11,6 @@ class SimpleTemplate(BaseTemplate):
 
     def _stage_1(self):
         return [
-            self.pop(self.all_exercises.daily),
-            self._neck_exercise()
+            self._neck_exercise(),
+            self.pop_n(category="daily", increase=True)
         ]
-
-    def _generate_exercises(self):
-        exercises = []
-
-        if not self.is_empty(self.all_exercises.daily):
-            exercises.extend(self._stage_1())
-
-        if self.is_empty(self.all_exercises.daily):
-            self.refill("daily")
-
-        return exercises
-

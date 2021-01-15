@@ -12,7 +12,7 @@ class ExerciseStorage:
             Daily=None,
             Bonus=None,
             Power=None,
-            Flexability=None,
+            Flexibility=None,
             Massage=None,
             Balance=None
         )
