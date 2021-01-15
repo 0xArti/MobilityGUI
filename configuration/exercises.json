@@ -48,6 +48,7 @@
 
 
 
+
         {
             "name": "Scapula Press",
             "min": 8,
@@ -211,14 +212,7 @@
             "measure": "repeat",
             "type": "daily"
         },
-        {
-            "name": "Hang (Bar)",
-            "min": 10,
-            "max": 25,
-            "measure": "hold",
-            "type": "daily",
-            "equipment": "bar"
-        },
+
 
 
 
@@ -575,6 +569,7 @@
 
 
 
+
         {
             "name": "Push-up",
             "min": 5,
@@ -609,14 +604,6 @@
             "max": 12,
             "measure": "repeat",
             "type": "power"
-        },
-        {
-            "name": "Hang (Bar)",
-            "min": 10,
-            "max": 25,
-            "measure": "hold",
-            "type": "power",
-            "equipment": "bar"
         },
         {
             "name": "Active Hang (Bar)",
@@ -666,9 +653,34 @@
             "type": "power",
             "equipment": "bar"
         },
+        {
+            "name": "Chin-up (Bar)",
+            "min": 5,
+            "max": 10,
+            "measure": "repeat",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Close Chin-up (Bar)",
+            "min": 4,
+            "max": 10,
+            "measure": "repeat",
+            "type": "power",
+            "equipment": "bar"
+        },
+        {
+            "name": "Chin-up Hold (Bar)",
+            "min": 8,
+            "max": 20,
+            "measure": "hold",
+            "type": "power",
+            "equipment": "bar"
+        },
 
 
         
+
         {
             "name": "Knee Hold (Rings)",
             "min": 1,
@@ -768,12 +780,13 @@
 
 
 
+
         {
             "name": "Elbows Massage (Ball)",
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message",
+            "type": "massage",
             "equipment": "Massage Ball"
         },
         {
@@ -781,7 +794,7 @@
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message",
+            "type": "massage",
             "equipment": "Massage Ball"
         },
         {
@@ -789,7 +802,7 @@
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message",
+            "type": "massage",
             "equipment": "Massage Ball"
         },
         {
@@ -797,7 +810,7 @@
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message",
+            "type": "massage",
             "equipment": "Massage Ball"
         },
         {
@@ -805,7 +818,7 @@
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message",
+            "type": "massage",
             "equipment": "Massage Ball"
         },
         {
@@ -813,7 +826,7 @@
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message",
+            "type": "massage",
             "equipment": "Massage Ball"
         },
         {
@@ -821,15 +834,16 @@
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message"
+            "type": "massage"
         },
         {
             "name": "Hands Heat",
             "min": 1,
             "max": 1,
             "measure": "repeat",
-            "type": "message"
+            "type": "massage"
         },
+
 
 
 
@@ -839,6 +853,18 @@
             "max": 30,
             "measure": "hold",
             "type": "flexibility"
+        },
+
+
+
+
+        {
+            "name": "Hang (Bar)",
+            "min": 10,
+            "max": 25,
+            "measure": "hold",
+            "type": ["daily", "power"],
+            "equipment": "bar"
         }
     ]
 }
