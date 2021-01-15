@@ -7,7 +7,7 @@ from src.callback import Callback
 
 class BaseTemplate(metaclass=abc.ABCMeta):
     def __init__(self, exercises):
-        self.stage = 3
+        self.stage = 0
         self.event_staged = False
         self.all_exercises = exercises
         self._exercises_copy = copy.deepcopy(self.all_exercises)
