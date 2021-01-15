@@ -13,13 +13,14 @@ class ExerciseStorage:
             Bonus=None,
             Power=None,
             Flexability=None,
+            Massage=None,
             Balance=None
         )
         self.exercises_copy = None
         self._current = None
         self._initialize()
 
-    def _initialize(self, renew=True, settings=None):
+    def _initialize(self):
         settings = DynamicConfig(**load_from_configuration("settings.json"))
         equipments = DynamicConfig(**load_from_configuration("exercises.json", "equipment"))
 
@@ -31,10 +32,14 @@ class ExerciseStorage:
         # instantiate Template object 
         template_class = exercise_templates[settings.template]
         self.template = template_class(self.sorted_exercises)  
-        if renew:
-            self._current = []
+        self._current = []
 
     def reset(self):
+        """
+        Re-loads the configuration
+        Each day built on-top of fresh new config, so the user doesn't need to
+         reset the service to update it.
+        """
         self._initialize()
 
     def clear(self):
