@@ -1,5 +1,7 @@
 from random import randint
 
+from src import config_loader
+
 
 class Exercise(config_loader.DynamicConfig):
     _ENABLED_KEY = "enabled"
