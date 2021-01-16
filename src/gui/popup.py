@@ -18,14 +18,18 @@ class Popup:
     IGNORE_KEY = "Ignore"
     DONE_KEY = "Done"
     EXERCISE_KEY = "Exercises"
+    REMOVE_EXERCISE = "Remove"
 
     def __init__(self):
+        self.current_values = None
         self._first_run = True
         self.gui_config = None
+        self.exercises_list = None
         self.layout = None
         self.window = None
         
     def initialize(self):
+        self.current_values = []
         self.gui_config = create_config_values()
         self.exercises = []
         self._apply_config()
@@ -46,33 +50,50 @@ class Popup:
     def is_hidden(self):
         return self.window._Hidden
         
-    def display(self, exercises, timeout=None, updated=True):
+    def display(self, exercises, timeout=None):
         """
         :param exercises: list of exercises information
         :param timeout: timeout in milliseconds to wait for user input
-        :param updated: if exercises has changed from last run
         :returns: True if user clicked on the "Done" button
         """
         if self._first_run:
             self.window.finalize()
             self.window.Hide()
+            exercises_list = self.window.FindElement(self.EXERCISE_KEY)
+            exercises_list.bind("<BackSpace>", self.REMOVE_EXERCISE)
+            exercises_list.bind("<Delete>", self.REMOVE_EXERCISE)
+            self.exercises_list = self.window.FindElement(self.EXERCISE_KEY)
             self._first_run = False
 
-        exercises_list = self.window.FindElement(self.EXERCISE_KEY)
+        updated = self.current_values != exercises
         if updated:
-            exercises_list.Update(values=exercises)
-
+            self.update(exercises)
+        
         if self.window._Hidden and exercises and updated:
             self.window.UnHide()
 
-        event, _ = self.window.read(timeout=timeout)
-        if event != "__TIMEOUT__":
+        event, item = self.window.read(timeout=timeout)
+        if self.REMOVE_EXERCISE in event:
+            self._remove_item(item)
+        elif event != "__TIMEOUT__":
             self.window.Hide()
         
-        return event == self.DONE_KEY
+        is_done = event == self.DONE_KEY
+        self.current_values = self.get_values()
+        if is_done:
+            self.current_values = []
+            self.update(self.current_values)
+
+        return is_done
 
     def close(self):
         self.window.close()
+
+    def update(self, exercises):
+        self.exercises_list.Update(values=exercises)
+
+    def get_values(self):
+        return self.exercises_list.get_list_values()
 
     def _apply_config(self):
         sg.theme(self.gui_config.theme)
@@ -91,3 +112,11 @@ class Popup:
                 elements.done_button(self.DONE_KEY)
             ]
         ]
+
+    def _remove_item(self, item):
+        if item[self.EXERCISE_KEY] == []:
+            return
+        exercise = item[self.EXERCISE_KEY][0]
+        values = self.get_values()
+        values.remove(exercise)
+        self.update(values)

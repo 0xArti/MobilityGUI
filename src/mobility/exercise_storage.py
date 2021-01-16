@@ -50,9 +50,13 @@ class ExerciseStorage:
     def add(self, exercises):
         self._current.extend(exercises)
         
-    def generate_exercise(self, by_order=False):
+    def generate_exercise(self):
         exercises = self.template.generate_exercises()
         self.add(exercises)
+
+    def update(self, updated_current):
+        self._current = [exercise for exercise in self._current 
+                         if str(exercise) in updated_current]
 
     @property
     def current(self):

@@ -31,7 +31,6 @@ class MobilityService:
         self.worker_thread = None
         self.seconds_interval = consts.MINUTE * self.settings.popup_timeout
         self.seconds_counter = 0
-        self.updated = False
 
     def _get_date(self):
         return datetime.now().strftime("%Y/%m/%d")
@@ -77,8 +76,7 @@ class MobilityService:
             self.exercises.reset()
 
         # Display user popup with exercises and get result
-        self.exercises.generate_exercise(by_order=True)
-        self.updated = True
+        self.exercises.generate_exercise()
 
     def process(self):
         """
@@ -92,10 +90,11 @@ class MobilityService:
             self.worker_thread = None
         user_result = self.popup.display(
             self.exercises.current, 
-            timeout=consts.USER_DELAY * consts.SECOND, 
-            updated=self.updated
+            timeout=consts.USER_DELAY * consts.SECOND
         )
-        self.updated = False
+     
         if user_result:
             self.exercises.clear()
+        else:
+            self.exercises.update(self.popup.current_values)
             
