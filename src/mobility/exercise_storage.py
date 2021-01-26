@@ -1,5 +1,6 @@
 from src.config_loader import DynamicConfig, load_from_configuration
-from src.mobility.exercises_provider import get_exercises, get_exercise_metadata
+from src.mobility.exercises_provider import get_exercises, get_exercises_types, \
+    get_exercise_metadata
 from src.mobility.templates import exercise_templates
 
 
@@ -7,15 +8,7 @@ class ExerciseStorage:
     def __init__(self):
         self.template = None
         self._all_exercises = None
-        self.sorted_exercises = DynamicConfig(
-            Neck=None,
-            Daily=None,
-            Bonus=None,
-            Power=None,
-            Flexibility=None,
-            Massage=None,
-            Balance=None
-        )
+        self.sorted_exercises = DynamicConfig(**get_exercises_types())
         self.exercises_copy = None
         self._current = None
         self._initialize()
