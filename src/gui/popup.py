@@ -101,6 +101,8 @@ class Popup:
         return is_done
 
     def _calculate_timeout(self, past_timeout, time_delta):
+        if past_timeout is None:
+            return
         milliseconds_delta = time_delta.total_seconds() * 1000
         new_timeout = past_timeout - milliseconds_delta
         if new_timeout <= 0:
