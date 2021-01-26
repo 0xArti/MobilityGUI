@@ -2,5 +2,5 @@
     "popup_timeout": 20,
     "idle_timeout": 5,
     "equipment": true,
-    "template": "Intermediate"
+    "template": "Rush"
 }
