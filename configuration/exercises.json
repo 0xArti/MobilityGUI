@@ -199,7 +199,7 @@
             "type": "daily"
         },
         {
-            "name": "lazy Jefferson Curl",
+            "name": "Lazy Jefferson Curl",
             "min": 4,
             "max": 6,
             "measure": "repeat",
@@ -216,13 +216,6 @@
 
 
 
-        {
-            "name": "Hold Push-up",
-            "min": 10,
-            "max": 30,
-            "measure": "hold",
-            "type": "bonus"
-        },
         {
             "name": "Deep Squat",
             "min": 5,
@@ -263,20 +256,6 @@
             "min": 5,
             "max": 10,
             "measure": "repeat",
-            "type": "bonus"
-        },
-        {
-            "name": "Air Squat Sit",
-            "min": 20,
-            "max": 50,
-            "measure": "hold",
-            "type": "bonus"
-        },
-        {
-            "name": "Wall Squat Sit",
-            "min": 30,
-            "max": 60,
-            "measure": "hold",
             "type": "bonus"
         },
         {
@@ -441,6 +420,20 @@
             "type": "bonus"
         },
         {
+            "name": "Knee to Outer Side",
+            "min": 10,
+            "max": 20,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
+            "name": "Knee to Inner Side",
+            "min": 10,
+            "max": 20,
+            "measure": "hold",
+            "type": "bonus"
+        },
+        {
             "name": "Standing Hip Flexion",
             "min": 8,
             "max": 20,
@@ -578,6 +571,13 @@
             "type": "power"
         },
         {
+            "name": "Hold Push-up",
+            "min": 10,
+            "max": 30,
+            "measure": "hold",
+            "type": "power"
+        },
+        {
             "name": "Slow Push-up",
             "min": 5,
             "max": 8,
@@ -676,6 +676,20 @@
             "measure": "hold",
             "type": "power",
             "equipment": "bar"
+        },
+        {
+            "name": "Air Squat Sit",
+            "min": 20,
+            "max": 50,
+            "measure": "hold",
+            "type": "power"
+        },
+        {
+            "name": "Wall Squat Sit",
+            "min": 30,
+            "max": 60,
+            "measure": "hold",
+            "type": "power"
         },
 
 
@@ -859,12 +873,79 @@
 
 
         {
+            "name": "Flower Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+        {
+            "name": "Butterfly Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+        {
+            "name": "Flamingo Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+        {
+            "name": "Flamingo Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+        {
+            "name": "Ballerina Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+        {
+            "name": "Skater Hero Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+        {
+            "name": "Single Hero Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+        {
+            "name": "Folded Handstand Pose",
+            "min": 1,
+            "max": 1,
+            "measure": "repeat",
+            "type": "meditation"
+        },
+
+
+
+
+        {
             "name": "Hang (Bar)",
             "min": 10,
             "max": 25,
             "measure": "hold",
             "type": ["daily", "power"],
             "equipment": "bar"
+        },
+        {
+            "name": "Forearm Strength",
+            "min": 15,
+            "max": 25,
+            "measure": "hold",
+            "type": ["bonus", "power"]
         }
     ]
 }
