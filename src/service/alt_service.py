@@ -92,7 +92,7 @@ class MobilityService:
             self.exercises.current, 
             timeout=consts.USER_DELAY * consts.SECOND
         )
-     
+
         if user_result:
             self.exercises.clear()
         else:

@@ -31,12 +31,13 @@ def title(title_name):
     )
 
 
-def exercise_list(exercise_key, exercises, font):
+def exercise_list(exercise_key, font):
     return sg.Listbox(
-        values=exercises,
+        values=[],
         font=font,
         size=(32, 5),
         pad=((20, 0), (10, 0)),
+        select_mode=sg.LISTBOX_SELECT_MODE_SINGLE,
         no_scrollbar=True,
         key=exercise_key
     )
