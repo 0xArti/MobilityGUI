@@ -22,11 +22,13 @@ What's New
 * Added guide for exercises\
     The Guide can be view under docs/guide
 * Added templates
+* Added option to delete current exercises from the GUI
 
 Bug Fixes
 * Repetition does no changed for the same exercise
 * When user AFK, the popup timer still run
 * DynamicConfig is now case-insensitive
+* Fixed UI related bugs
 
 ---
 
